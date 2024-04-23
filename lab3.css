@@ -1,5 +1,48 @@
-h1{
+/* All h1 tags in the html will have the following properties applied 
+    Uses a element selector on h1,h2 pair
+ */
+h1,h2{ 
     color: blueviolet;
     text-decoration: underline;
     text-transform: uppercase;
+}
+
+#navigation{ /* Uses id selector */
+    color:rgb(255, 165, 0); /* Uses rgb */
+}
+#navigation #agenda-link{ /* Uses */
+    color:#008000 /* Uses hex selector */
+}
+
+#navigation #unresolved-link{ 
+    color:hsl(120, 100%, 25%); /* Uses hsl */
+}
+
+#navigation #discussion-link{
+    color:rgb( 0%, 30%, 10%); /*Uses color function*/
+}
+
+#navigation #concerns-link{
+    color:color-mix(in srgb, red 50%, blue 50%)/*uses color-mix function*/
+}
+
+.agendas > li{ /*Uses class selector and child combinator*/
+    background-color: aquamarine;
+}
+
+.agendas.li{ /*uses background color*/
+    background-color: blue;
+}
+
+#navigation a[href="#visualsandrecording"]{ /*uses attribute selector*/
+    color:pink;
+}
+
+
+#agenda ~ ul{ /*Styles the ul element under h2*/
+   text-decoration: underline; /*uses general sibling and underlines BUG*/
+}
+
+#agenda + ol{ /*styles the ol elements under h2*/
+    text-decoration: line-through;
 }
