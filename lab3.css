@@ -34,7 +34,7 @@ h1,h2{
 }
 
 #navigation #concerns-link{
-    color:color-mix(in srgb, red 50%, blue 50%)/*uses color-mix function*/
+    color:color-mix(srgb, red 50%, blue 50%)/*uses color-mix function*/
 }
 
 .agendas > li{ /*Uses class selector and child combinator*/
