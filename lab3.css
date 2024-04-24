@@ -4,13 +4,24 @@
 h1,h2{ 
     color: blueviolet;
     text-decoration: underline;
-    text-transform: uppercase;
 }
 
 #navigation{ /* Uses id selector */
     color:rgb(255, 165, 0); /* Uses rgb */
+    border: 5px solid black;
+
+    display: block; /*uses display block property*/
+
+    position: static;
+
+    padding: 1% 1% 1% 18%; /*padding spaces it out from edge of box, Margin is space from corner of screen*/
+
+    margin-top: 15px; /*adds 15 pixels of spacing between the navigation box and the brainstorm box*/
+    margin-bottom: 0px;
+    margin-left: 25%;
+    margin-right: 25%;
 }
-#navigation #agenda-link{ /* Uses */
+#navigation #agenda-link{ /* COMBINES 2 id selectors */
     color:#008000 /* Uses hex selector */
 }
 
@@ -27,22 +38,84 @@ h1,h2{
 }
 
 .agendas > li{ /*Uses class selector and child combinator*/
+    width: 25vw; /*uses view-width relative unit, which is relative to screen size*/
+    height: 30px;/*uses pixel absolute unit, which is absolute*/
+    text-align: center;
     background-color: aquamarine;
+    position: relative;
 }
 
-.agendas.li{ /*uses background color*/
-    background-color: blue;
+
+#concerns + ul{
+    display: inline-block; /*uses inline flex display property*/
+    margin: auto;
 }
 
 #navigation a[href="#visualsandrecording"]{ /*uses attribute selector*/
     color:pink;
 }
 
+button:hover{
+    color: lightgreen;
+}
 
+button:active{
+    box-shadow: 2px 2px 5px green;
+}
 #agenda ~ ul{ /*Styles the ul element under h2*/
+   width: 25vw; /*uses view-width relative unit, which is relative to screen size*/
+   height: 40px; /*uses pixel absolute unit, which is absolute*/
+   background-color: orange;
    text-decoration: underline; /*uses general sibling and underlines BUG*/
 }
 
-#agenda + ol{ /*styles the ol elements under h2*/
-    text-decoration: line-through;
+:root{/*creates a css variable*/
+    --main-bg-color:brown;
 }
+
+
+#agenda + ol{ /*styles the ol elements under h2*/
+    max-width: 25vw; /*uses view-width relative unit, which is relative to screen size*/
+    max-height: 65px; /*uses pixels relative unit, which is absolute*/
+    text-decoration: line-through;
+    display: inline-flex;
+    background-color: var(--main-bg-color,pink); /*fallback option of pink if brown fails */
+}
+
+*#brainstorm{
+    border-style: solid; /*the border creates the box and rounds it out*/
+    border-color: blue;
+    border-width: 10px;
+    border-radius: 50px;
+
+    margin: 0 0 0 0;
+
+    padding-top:1%; /*padding spaces it out from edge of box, Margin is space from corner of screen*/
+    padding-bottom: 1%;
+    padding-left: 40%;
+    padding-right: 0%;
+    margin:0px;
+}
+
+
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+#footer-link form{
+    display:grid;
+    row-gap:10px;
+    column-gap:10px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+*{
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
